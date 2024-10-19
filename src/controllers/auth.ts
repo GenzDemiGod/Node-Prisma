@@ -55,7 +55,7 @@ export const login = async (req: Request<{},{},loginSchemaType>, res: Response) 
     const { password: _, ...userWithoutPassword } = checkUserExist;
 
     // Send user details (without password) and token
-    return responseHandler.success(res, "Signup success", { user: userWithoutPassword });
+    return responseHandler.success(res, "Login success", { user: userWithoutPassword });
   } catch (error) {
     return responseHandler.error(res, error);
   }
